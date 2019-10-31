@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <form action="/logout" method="post">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            <input type="submit" value="Sign Out"/>
+        </form>
+        <form method="post" action="filter">
+            <input type="text" name="filter" placeholder="Search by name"/>
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            <button type="submit">Search</button>
+        </form>
+        <div>List of bands:</div>
+        <table>
+        {{#bands}}
+            <tr>
+        <div>
+            <td><b>{{name}}</b></td>
+            <td><span>{{genre}}</span></td>
+            <td><i>{{origin}}</i></td>
+            <td><strong>{{foundation}}</strong></td>
+            <td>
+                {{#filename}}
+                    <img src="/img/{{filename}}" height="75" width="75">
+                {{/filename}}
+            </td>
+        </div>
+            </tr>
+        </table>
+        {{/bands}}
+        <a href="/adding">Add new band</a>
+    </body>
+</html>
