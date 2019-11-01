@@ -9,7 +9,7 @@
         <div>Band origin:<input type="text" name="origin"/></div>
         <div>Band foundation:<input type="text" name="foundation"/></div>
         <div>Band Poster:<input type="file" name="file"></div>
-        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <button type="submit">Add</button>
     </form>
 </body>
