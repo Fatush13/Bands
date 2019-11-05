@@ -22,9 +22,9 @@
                         <td><b>${band.name}</b></td>
                         <td><span>${band.genre}</span></td>
                         <td><i>${band.origin}</i></td>
-                        <td><strong>{foundation}</strong></td>
+                        <td><strong>${band.foundation}</strong></td>
                         <td>
-                            <#if filename??>
+                            <#if band.filename??>
                                 <img src="/img/${band.filename}" height="75" width="75">
                             </#if>
                         </td>
